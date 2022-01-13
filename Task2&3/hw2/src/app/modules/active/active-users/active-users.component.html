@@ -1,0 +1,8 @@
+<div>
+      <div *ngFor = "let item of display">
+        <li class="list-group-item list-group-item-light" style="border: green 2px solid; margin-bottom: 1rem;margin-left: 1rem;margin-right: 1rem;" *ngIf = "!item.isDeleted" >
+            <h3 class="display-4">{{item.firstName}} {{item.lastName}}</h3>
+            <button class="btn btn-danger" style="margin-left: 68rem;" (click) = "moveToDeactivate(item)">Deactivate</button>
+        </li>
+    </div>
+</div>

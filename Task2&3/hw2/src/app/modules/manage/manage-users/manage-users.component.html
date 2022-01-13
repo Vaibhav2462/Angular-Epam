@@ -1,0 +1,62 @@
+<button class="btn btn-success" style="margin-left: 70rem;" (click) = "createUser()">Create</button>
+<div style="display: flex;" class="container">
+<div class="row">
+<div class = "col" >
+    <div *ngFor = "let item of display">
+      <li class="list-group-item list-group-item-light" style="border: green 2px solid; margin-bottom: 1rem;" *ngIf = "!item.isDeleted" >
+          <h3 class="display-4">{{item.firstName}} {{item.lastName}}</h3>
+          <div style="margin-left: 25rem;">
+            <button class="btn btn-warning"  (click) = "editUserFlag(item)">Edit</button>
+          <button class="btn btn-primary" style="margin-left: 1rem;" (click) = "detailsNeeded(item)">Details</button>
+          </div>
+          </li>
+      <li class="list-group-item list-group-item-light" style="border: red 2px solid; margin-bottom: 1rem;" *ngIf = "item.isDeleted" >
+        <h3 class="display-4">{{item.firstName}} {{item.lastName}}</h3>
+        <div style="margin-left: 25rem;">
+          <button class="btn btn-warning"  (click) = "editUserFlag(item)">Edit</button>
+        <button class="btn btn-primary" style="margin-left: 1rem;" (click) = "detailsNeeded(item)">Details</button>
+        </div>
+      </li>
+    </div>
+</div>
+<div class="col-4" *ngIf="isFormClicked"> <app-user-create></app-user-create> </div>
+<div class="col-3" *ngIf="isEditClicked"> 
+  <form>
+    <div class="form-group">
+      <label for="exampleInputPassword1">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" [(ngModel)] = "password" [ngModelOptions]="{standalone: true}">
+    </div>
+    <div class="form-group">
+        <label for="exampleInputEmail1">Age</label>
+        <input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" [(ngModel)] = "age" [ngModelOptions]="{standalone: true}">
+      </div>
+    <button type="submit" class="btn btn-primary" (click) = "editUser()">Update</button>
+  </form>   
+</div>
+<div class="col-3"  *ngIf = "isClicked" style="border: grey 1px solid;height: 16.5rem;margin-left: 6rem;margin-top: 5rem;width: 30rem;">
+    <h4 style="margin-left: 0.6rem;">{{showItem.firstName}} {{showItem.lastName}}</h4>
+    <h5 *ngIf = "showItem.isDeleted" style="color:red;margin-left: 0.6rem;">INACTIVE</h5>
+    <h5 *ngIf = "!showItem.isDeleted" style="color:green;margin-left: 0.6rem;">ACTIVE</h5>
+    <table class="table table-borderless">
+        <tbody>
+          <tr>
+            <th>LOGIN ID:</th>
+            <td>{{showItem.login}}</td>
+          </tr>
+          <tr>
+            <th>First Name:</th>
+            <td>{{showItem.firstName}}</td>
+          </tr>
+          <tr>
+            <th>Last Name:</th>
+            <td>{{showItem.lastName}}</td>
+          </tr>
+          <tr>
+            <th>Age:</th>
+            <td>{{showItem.age}}</td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+</div>
+</div>
