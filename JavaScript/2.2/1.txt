@@ -1,0 +1,195 @@
+seven(times(five())); // must return 35
+four(plus(nine())); // must return 13
+eight(minus(three())); // must return 5
+six(dividedBy(two())); // must return 3
+
+
+
+Solution:-
+function zero() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 0*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 0+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return 0;
+        }
+        if(arguments[0][0] == "-"){
+            return 0-arguments[0][1];
+        }
+    }
+    return 0;
+}
+function one() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 1*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 1+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(1/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 1-arguments[0][1];
+        }
+    }
+    return 1;
+}
+function two() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 2*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 2+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(2/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 2-arguments[0][1];
+        }
+    }
+    return 2;
+}
+function three() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 3*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 3+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(3/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 3-arguments[0][1];
+        }
+    }
+    return 3;
+}
+function four() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 4*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 4+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(4/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 4-arguments[0][1];
+        }
+    }
+    return 4;
+}
+function five() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 5*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 5+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(5/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 5-arguments[0][1];
+        }
+    }
+    return 5;
+}
+function six() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 6*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 6+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(6/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 6-arguments[0][1];
+        }
+    }
+    return 6;
+}
+function seven() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 7*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 7+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(7/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 7-arguments[0][1];
+        }
+    }
+    return 7;
+}
+function eight() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 8*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 8+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(8/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 8-arguments[0][1];
+        }
+    }
+    return 8;
+}
+function nine() {
+  if(arguments.length !=0){
+        if(arguments[0][0] == "*"){
+            return 9*arguments[0][1];
+        }
+        if(arguments[0][0] == "+"){
+            return 9+arguments[0][1];
+        }
+        if(arguments[0][0] == "/"){
+            return Math.floor(9/arguments[0][1]);
+        }
+        if(arguments[0][0] == "-"){
+            return 9-arguments[0][1];
+        }
+    }
+    return 9;
+}
+
+function plus(num) {
+  var arr = ["+",num]
+    return arr;
+}
+function minus(num) {
+  var arr = ["-",num]
+    return arr;
+}
+function times(num) {
+  var arr = ["*",num]
+    return arr;
+}
+function dividedBy(num) {
+  var arr = ["/",num]
+    return arr;
+}

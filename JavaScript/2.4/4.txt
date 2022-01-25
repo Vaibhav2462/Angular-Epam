@@ -1,0 +1,12 @@
+f3 = compose( f1 f2 )
+   Is equivalent to...
+f3(a) = f1( f2( a ) )
+
+compose(f , g)(x)
+=> f( g( x ) )
+
+Solution:-
+function compose(f,g) {
+  // Compose the two functions here!
+  return function() { return f(g.apply(this, arguments)); };
+}

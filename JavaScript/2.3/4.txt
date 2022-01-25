@@ -1,0 +1,24 @@
+obj = createSecretHolder(5)
+obj.getSecret() # returns 5
+obj.setSecret(2)
+obj.getSecret() # returns 2
+FUNDAMENTALSCLOSURES
+
+
+
+
+Solution:-
+
+function createSecretHolder(secret) {
+  let secretInFunction = secret
+  let secretObj = {
+    getSecret : function(){
+      return this._secret
+    },
+    setSecret : function(newSecret){
+      this._secret = newSecret
+    }
+  }
+  secretObj.setSecret(secretInFunction)
+  return secretObj
+}

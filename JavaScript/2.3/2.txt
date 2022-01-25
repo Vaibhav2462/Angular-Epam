@@ -1,0 +1,13 @@
+var three = always(3);
+three(); // returns 3
+
+
+
+
+Solution:-
+function always (n) {
+  function temp(){
+    return n;
+  }
+  return temp
+}

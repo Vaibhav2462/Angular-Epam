@@ -1,0 +1,25 @@
+const addOne = (a) => a + 1
+const multTwo = (b) => b * 2
+const addOneMultTwo = (c) => multTwo(addOne(c))
+
+addOneMultTwo(5) // returns 12
+
+
+Solution:-
+function compose(...args) {
+  // Your solution
+  const numbers = {
+    ZERO: 0,
+    ONE: 1,
+    TWO: 2,
+  };
+  return function (value) {
+    let result = value;
+    const startingIndex = args.length - numbers.ONE;
+    for (let index = startingIndex; index >= numbers.ZERO; index--) {
+      result = args[index](result);
+    }
+    return result;
+  };
+  
+}
