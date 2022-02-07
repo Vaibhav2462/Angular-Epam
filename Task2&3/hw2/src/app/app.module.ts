@@ -8,6 +8,9 @@ import { UsersListComponent } from './components/users-list/users-list.component
 import { UserDetailsComponent } from './components/user-details/user-details.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { UserCreateComponent } from './modules/manage/user-create/user-create.component';
+import { CommonModule } from '@angular/common';
+import { CombineName } from './pipes/combineName.pipe';
+import { SharedModule } from './pipe.module';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,6 @@ import { UserCreateComponent } from './modules/manage/user-create/user-create.co
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

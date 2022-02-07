@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersService } from 'src/app/services/users.service';
-
+// import { CombineName } from 'src/app/pipes/combineName.pipe';
 @Component({
   selector: 'app-manage-users',
   templateUrl: './manage-users.component.html',
@@ -19,6 +19,7 @@ export class ManageUsersComponent implements OnInit {
   public age:number = 0
   public itemToBeEdited:any = {}
   public showItem:any = {}
+  public temp:any = ["vaibhav","guptaaa"]
   ngOnInit(): void {
     this.display = this.userService.getData()
     console.log(this.display)

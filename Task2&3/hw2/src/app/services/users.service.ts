@@ -16,7 +16,7 @@ export class UsersService {
   public user: any = [{
     id: "1",
     firstName: "Vaibhav",
-    lastName: "Gupta",
+    lastName: "gupta",
     age: 23,
     login: "vg@gmail.com",
     password: "Pass",
@@ -25,7 +25,7 @@ export class UsersService {
   {
     id: "2",
     firstName: "Prashant",
-    lastName: "Pranav",
+    lastName: "pranav",
     age: 23,
     login: "PP@gmail.com",
     password: "Pass",
@@ -33,7 +33,7 @@ export class UsersService {
   },
   {
     id: "3",
-    firstName: "Parag",
+    firstName: "parag",
     lastName: "Sharma",
     age: 28,
     login: "PS@gmail.com",

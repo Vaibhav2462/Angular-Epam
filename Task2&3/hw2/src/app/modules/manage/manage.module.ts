@@ -6,7 +6,8 @@ import { UserDetailsComponent } from './user-details/user-details.component';
 import { UserCreateComponent } from './user-create/user-create.component';
 import { FormsModule } from '@angular/forms';
 import { EditUserComponent } from './edit-user/edit-user.component';
-
+import { SharedModule } from 'src/app/pipe.module';
+// import { CombineName } from 'src/app/pipes/combineName.pipe';
 
 
 @NgModule({
@@ -14,12 +15,14 @@ import { EditUserComponent } from './edit-user/edit-user.component';
     ManageUsersComponent,
     UserDetailsComponent,
     UserCreateComponent,
-    EditUserComponent
+    EditUserComponent,
+    // CombineName
   ],
   imports: [
     CommonModule,
     ManageRoutingModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ],
 })
 

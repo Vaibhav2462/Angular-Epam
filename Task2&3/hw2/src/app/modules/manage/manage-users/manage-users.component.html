@@ -4,14 +4,15 @@
 <div class = "col" >
     <div *ngFor = "let item of display">
       <li class="list-group-item list-group-item-light" style="border: green 2px solid; margin-bottom: 1rem;" *ngIf = "!item.isDeleted" >
-          <h3 class="display-4">{{item.firstName}} {{item.lastName}}</h3>
+        
+          <h3 class="display-4">{{[item.firstName,item.lastName] | combineName}}</h3>
           <div style="margin-left: 25rem;">
             <button class="btn btn-warning"  (click) = "editUserFlag(item)">Edit</button>
           <button class="btn btn-primary" style="margin-left: 1rem;" (click) = "detailsNeeded(item)">Details</button>
           </div>
           </li>
       <li class="list-group-item list-group-item-light" style="border: red 2px solid; margin-bottom: 1rem;" *ngIf = "item.isDeleted" >
-        <h3 class="display-4">{{item.firstName}} {{item.lastName}}</h3>
+        <h3 class="display-4">{{item.firstName | titlecase}} {{item.lastName | titlecase}}</h3>
         <div style="margin-left: 25rem;">
           <button class="btn btn-warning"  (click) = "editUserFlag(item)">Edit</button>
         <button class="btn btn-primary" style="margin-left: 1rem;" (click) = "detailsNeeded(item)">Details</button>
@@ -35,8 +36,7 @@
 </div>
 <div class="col-3"  *ngIf = "isClicked" style="border: grey 1px solid;height: 16.5rem;margin-left: 6rem;margin-top: 5rem;width: 30rem;">
     <h4 style="margin-left: 0.6rem;">{{showItem.firstName}} {{showItem.lastName}}</h4>
-    <h5 *ngIf = "showItem.isDeleted" style="color:red;margin-left: 0.6rem;">INACTIVE</h5>
-    <h5 *ngIf = "!showItem.isDeleted" style="color:green;margin-left: 0.6rem;">ACTIVE</h5>
+    <h5 style="margin-left: 0.6rem;">{{showItem.isDeleted | userStatus}}</h5>
     <table class="table table-borderless">
         <tbody>
           <tr>
