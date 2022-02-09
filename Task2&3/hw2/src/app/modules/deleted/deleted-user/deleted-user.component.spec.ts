@@ -22,4 +22,8 @@ describe('DeletedUserComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it ("move to activate", ()=>{
+    let res = component.moveToActivate({login:"vaibhav"})
+    expect(res).toBe(true)
+  })
 });

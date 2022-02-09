@@ -30,6 +30,7 @@ export class DeletedUserComponent implements OnInit {
     }
     // console.log(this.display)
     this.userService.user = this.display
+    return true
   }
 }
 @NgModule({

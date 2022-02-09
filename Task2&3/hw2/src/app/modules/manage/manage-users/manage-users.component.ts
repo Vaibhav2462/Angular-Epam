@@ -30,17 +30,20 @@ export class ManageUsersComponent implements OnInit {
     this.isEditClicked = false
     this.showItem = item
     console.log(item)
+    return true
   }
   createUser(){
     this.isClicked = false
     this.isFormClicked = true
     this.isEditClicked = false
+    return true
   }
   editUserFlag(item){
     this.isClicked = false
     this.isFormClicked = false
     this.isEditClicked = true
     this.itemToBeEdited = item
+    return true
   }
   editUser(){
     this.itemToBeEdited.password = this.password
@@ -54,5 +57,6 @@ export class ManageUsersComponent implements OnInit {
     }
     this.userService.user = this.display
     this.isEditClicked = false
+    return true
   }
 }

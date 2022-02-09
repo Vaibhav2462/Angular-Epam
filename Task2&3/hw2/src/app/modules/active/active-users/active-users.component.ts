@@ -28,6 +28,7 @@ export class ActiveUsersComponent implements OnInit {
       }
     }
     this.userService.user = this.display
+    return true
   }
 }
 

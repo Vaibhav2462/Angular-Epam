@@ -13,4 +13,8 @@ describe('UsersService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+  it("get user",()=>{
+    let res = service.getData()
+    expect(res[0].firstName).toBe("Vaibhav")
+  })
 });

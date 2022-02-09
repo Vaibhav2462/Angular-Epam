@@ -22,4 +22,11 @@ describe('EditUserComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it("should update",()=>{
+    let res = component.editUser()
+    console.log(res)
+    expect(res).toBeTruthy()
+    // expect(res.age).toBe(0)
+  })
+
 });

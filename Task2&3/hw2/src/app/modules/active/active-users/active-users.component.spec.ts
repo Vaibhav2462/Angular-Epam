@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CombineName } from 'src/app/pipes/combineName.pipe';
 import { ActiveUsersComponent } from './active-users.component';
 
 describe('ActiveUsersComponent', () => {
@@ -22,4 +22,8 @@ describe('ActiveUsersComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it ("move to deactivate", ()=>{
+    let res = component.moveToDeactivate({login:"vaibhav"})
+    expect(res).toBe(true)
+  })
 });
