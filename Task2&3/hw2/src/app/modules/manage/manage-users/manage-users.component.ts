@@ -29,6 +29,7 @@ export class ManageUsersComponent implements OnInit {
     this.isFormClicked = false
     this.isEditClicked = false
     this.showItem = item
+    console.log(item)
   }
   createUser(){
     this.isClicked = false
